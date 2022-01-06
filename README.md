@@ -1,6 +1,6 @@
 # todo_app_getx
 
-A new Flutter project.
+todo_app_getx App is a kind of app that generally used to maintain our day-to-day tasks or list everything and we use getx libary for flutter state management.
 
 ## Getting Started
 
