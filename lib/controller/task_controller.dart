@@ -25,6 +25,12 @@ class TaskController extends GetxController {
 
   Future<int>? delete(Task task) async {
     int deleledId = await DBHelper.instanceExpense.deleteTask(task);
+    getTasks();
     return deleledId;
+  }
+
+  Future<void> markTaskCompleted(Task task) async {
+    await DBHelper.instanceExpense.updateTaskRow(task);
+    getTasks();
   }
 }

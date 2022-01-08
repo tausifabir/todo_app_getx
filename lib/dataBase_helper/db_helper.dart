@@ -80,4 +80,21 @@ class DBHelper {
     return await db
         .delete(taskTable, where: '$columnId= ?', whereArgs: [task.id]);
   }
+
+  Future<int> updateTaskComplete(int id) async {
+    Database db = await database;
+    return await db.rawUpdate('''
+    UPDATE tasks
+    SET isCompleted = ?
+    WHERE id = ?
+''', [1, id]);
+    //return await db.update(taskTable, row,
+    //  where: '$columnId= ?,$columnIsCompleted = ?', whereArgs: [id, 1]);
+  }
+
+  Future<int> updateTaskRow(Task task) async {
+    Database db = await database;
+    return await db.update(taskTable, task.toJson(),
+        where: '$columnIsCompleted = ?', whereArgs: [1]);
+  }
 }

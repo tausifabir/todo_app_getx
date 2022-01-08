@@ -28,8 +28,8 @@ class Task {
     this.title = json['title'];
     this.note = json['note'];
     this.date = json['date'];
-    this.startTime = json['startDate'];
-    this.endTime = json['endDate'];
+    this.startTime = json['startTime'];
+    this.endTime = json['endTime'];
     this.reminderTime = json['reminderTime'];
     this.repeatTime = json['repeatTime'];
     this.color = json['color'];
@@ -43,7 +43,7 @@ class Task {
     data['note'] = this.note;
     data['date'] = this.date;
     data['startTime'] = this.startTime;
-    data['startTime'] = this.endTime;
+    data['endTime'] = this.endTime;
     data['reminderTime'] = this.reminderTime;
     data['repeatTime'] = this.repeatTime;
     data['color'] = this.color;

@@ -326,7 +326,8 @@ class _AddTaskPageState extends State<AddTaskPage> {
           color: _selectedColor,
           isCompleted: 0),
     );
-
+    print('Start Time: $_startTime');
+    print('End Time: $_endTime');
     print('inserted id: $value');
   }
 }
